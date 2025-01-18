@@ -1,16 +1,16 @@
 {
-  "name": "talaria-frontend",
+  "name": "school-frontend",
   "version": "0.0.1",
-  "description": "Frontend of the Talaria project using next.js, cucumber-js, Playwright, Storybook",
+  "description": "Frontend of the school project using next.js, cucumber-js, Playwright, Storybook",
   "author": "cheroliv",
   "license": "ISC",
-  "homepage": "https://github.com:cheroliv/formateur#README",
+  "homepage": "https://github.com/cheroliv/formateur#README",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cheroliv/formateur.git"
+    "url": "git@github.com/cheroliv/formateur.git"
   },
   "bugs": {
-    "url": "https://github.com:cheroliv/formateur/issues"
+    "url": "https://github.com/cheroliv/formateur/issues"
   },
   "main": "index.js",
   "scripts": {
