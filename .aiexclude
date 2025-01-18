@@ -1,0 +1,15 @@
+.idea
+.next
+.storybook
+.vscode
+dist
+nbproject
+node_modules
+reports
+storybook-static
+test-results
+traces
+*.iml
+draft.txt
+*.code-workspace
+
