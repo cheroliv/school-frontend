@@ -99,6 +99,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.20(postcss@8.4.49)
+      daisyui:
+        specifier: ^5.0.35
+        version: 5.0.35
       eslint:
         specifier: 8.55.0
         version: 8.55.0
@@ -2449,6 +2452,9 @@ packages:
 
   cucumber-html-reporter@6.0.0:
     resolution: {integrity: sha512-SQUDQr0XEyo1cZmvwDAoWin49cINAYtznx3O02MmQ+bpY5O5NaBLBdrR2HSW7PqWu3+x8v9uq5yaAOXQIw2uJw==}
+
+  daisyui@5.0.35:
+    resolution: {integrity: sha512-AWi11n/x5++mps55jcwrBf0Lmip1euWY0FYcH/05SFGmoqrU7S7/aIUWaiaeqlJ5EcmEZ/7zEY73aOxMv6hcIg==}
 
   dargs@7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
@@ -8158,6 +8164,8 @@ snapshots:
       node-emoji: 1.11.0
       open: 6.4.0
       uuid: 3.4.0
+
+  daisyui@5.0.35: {}
 
   dargs@7.0.0: {}
 
