@@ -1,0 +1,4 @@
+= School-frontend project
+
+scanne le dossier courant et tous le sous-dossier suivant: app.
+Le projet est une application client react, le code source est en typescript dans le dossier app.
