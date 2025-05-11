@@ -2,3 +2,6 @@
 
 scanne le dossier courant et tous le sous-dossier suivant: app.
 Le projet est une application client react, le code source est en typescript dans le dossier app.
+
+**Résumé :** Les fichiers Storybook ont été supprimés, et `data.json` (données de formation) et `data-struct.json` (structure des données) ont été créés dans `app`.
+
