@@ -95,6 +95,7 @@ const Home: React.FC = () => {
     </div>
   );
 };
+
 const Footer: React.FC = () => {
   console.log('Pied de page affiché');
 
