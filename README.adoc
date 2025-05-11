@@ -1,7 +1,4 @@
-
-
-
-= cucumber-playwright
+= School-frontend project
 
 image:https://github.com/Tallyb/cucumber-playwright/workflows/Test/badge.svg[Test]
 
