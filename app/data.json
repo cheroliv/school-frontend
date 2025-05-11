@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Formation Assu-CRM",
+    "description": "Guide détaillé pour utiliser l'outils des courtiers Assu-CRM.",
+    "imageSrc": "https://cheroliv.github.io/img/assu-crm/Assu-CRM-training-img.png",
+    "altText": "Formation Assu-CRM"
+  },
+  {
+    "title": "Formation Informatisation Assu",
+    "description": "Guide détaillé pour appréhender l'agilité et la communication collaborative.",
+    "imageSrc": "https://cheroliv.github.io/img/assu-crm/informatisation-assu-training-img.png",
+    "altText": "Formation Informatisation Assu"
+  }
+]

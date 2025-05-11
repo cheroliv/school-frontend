@@ -1,0 +1,30 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "The title of the formation"
+      },
+      "description": {
+        "type": "string",
+        "description": "A brief description of the formation"
+      },
+      "imageSrc": {
+        "type": "string",
+        "description": "The URL of the image associated with the formation"
+      },
+      "altText": {
+        "type": "string",
+        "description": "The alt text for the image"
+      }
+    },
+    "required": [
+      "title",
+      "description",
+      "imageSrc",
+      "altText"
+    ]
+  }
+}
