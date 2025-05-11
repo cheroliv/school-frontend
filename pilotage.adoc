@@ -2,6 +2,5 @@
 
 scanne le dossier courant et tous le sous-dossier suivant: app.
 Le projet est une application client react, le code source est en typescript dans le dossier app.
-
-**Résumé :** Les fichiers Storybook ont été supprimés, et `data.json` (données de formation) et `data-struct.json` (structure des données) ont été créés dans `app`.
+Le but du projet et de faire un organisme formateur, qui va lister des formations, afficher les détails d'une formation, et permettre de s'inscrire à une formation. Mettre a disposition le calendrier des formations. La liste de l'equipe pedagogique, une page à propos.
 
