@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import trainings from './trainings';
 
 // Définition du type pour les formations
 export interface Training {
@@ -14,8 +15,11 @@ export interface Training {
   price: number;
 }
 
+const data: Training[] = trainings;
+
 const Home: React.FC = () => {
   logHomeLoaded();
+
   return (
     <div
       style={{
@@ -110,6 +114,7 @@ const Home: React.FC = () => {
 
 const Footer: React.FC = () => {
   console.log('Pied de page affiché');
+  console.log(`trainings : ${JSON.stringify(data)}`);
 
   return (
     <footer
