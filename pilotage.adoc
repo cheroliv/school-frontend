@@ -70,11 +70,11 @@ Le projet est une application client react, le code source est en typescript dan
 2.  **Componentization (If Necessary):** Si la logique de rendu dans `app/page.tsx` est complexe, créer des composants réutilisables (par exemple, `FormationCard`) pour afficher les formations individuelles.
 3.  **Data Fetching:** S'assurer que le composant `page.tsx` récupère et analyse correctement les données depuis `app/data.json`. Consider using `useEffect` et `useState` hooks.
 4.  **Dynamic Rendering:** Implémenter la logique pour rendre dynamiquement le catalogue des formations en fonction des données dans `data.json`.  Mapper le tableau `data.json` à des composants React.
-5.  **Styling:** Apply appropriate styles to the components to create a visually appealing catalog.
+5.  **Styling:** Appliquer des styles appropriés aux composants pour créer un catalogue visuellement attrayant.
 6.  **Refactor:** Refactor the code to improve the UI and code structure
-7.  **Responsiveness:** Ensure the catalog is responsive and adapts to different screen sizes.
-8.  **Deployment:** Configure the project for the chosen deployment platform (e.g., create a `netlify.toml` file for Netlify).
-9.  **Testing:** Write basic tests to ensure the catalog is rendering correctly. Consider using Playwright.
+7.  **Responsiveness:** S'assurer que le catalogue est responsive et s'adapte aux différentes tailles d'écran.
+8.  **Deployment:** Configurer le projet pour la plateforme de déploiement choisie (par exemple, créer un fichier `netlify.toml` file pour Netlify).
+9.  **Testing:** Écrire des tests de base pour s'assurer que le catalogue s'affiche correctement. Envisager d'utiliser Playwright.
 
 
 === Tâches
@@ -135,3 +135,11 @@ Le projet est une application client react, le code source est en typescript dan
         *   **Recommandations :**
             * Ajouter des liens de navigation si nécessaire.
             * Vérifier que les données s'affichent comme prévu dans l'interface utilisateur.
+* **[Terminé] Review the `app` directory:** Examiner le dossier `app` pour des améliorations de l'UI et des fonctionnalités.
+        * **Actions réalisées :**
+          * Created MenuNavigation component to improve the title UX/UI.
+          * Modified MenuNavigation component to remove duplicated titles.
+          * Updated app/page.tsx to fetch data from /public/data.json
+        *   **Recommandations :**
+            * Ajouter des liens de navigation si nécessaire.
+            * Utiliser l'interface Training pour la variable trainings dans `/app/page.tsx`

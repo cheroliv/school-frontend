@@ -28,7 +28,7 @@ const MenuNavigation: React.FC = () => {
               {/*<Link href="/apropos" className="hover:underline">*/}
               {/*  A propos*/}
               {/*</Link>*/}
-        </nav>
+            </nav>
           </div>
         </div>
       </div>
