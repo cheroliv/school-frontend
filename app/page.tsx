@@ -2,6 +2,18 @@
 
 import React from 'react';
 
+// Définition du type pour les formations
+export interface Training {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  duration: string;
+  level: 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Expert';
+  tags: string[];
+  price: number;
+}
+
 const Home: React.FC = () => {
   logHomeLoaded();
   return (
@@ -117,5 +129,7 @@ const logHomeLoaded = () => console.log("Page d'accueil chargée");
 //const logTrainingDisplayed = (formation: string) => { console.log(formation) }
 
 //const logTrainingsDisplayed = () => { console.log(`Formations affichées`) }
+
+
 
 export default Home;
