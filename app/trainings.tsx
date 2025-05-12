@@ -5,7 +5,8 @@ const trainings: Training[] = [
   {
     id: 'assu-crm-001',
     title: 'Formation Assu-CRM',
-    description: 'Guide détaillé pour utiliser l\'outil des courtiers Assu-CRM. Cette formation vous permettra de maîtriser toutes les fonctionnalités essentielles pour optimiser votre relation client.',
+    description:
+      "Guide détaillé pour utiliser l'outil des courtiers Assu-CRM. Cette formation vous permettra de maîtriser toutes les fonctionnalités essentielles pour optimiser votre relation client.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/Assu-CRM-training-img.png',
     duration: '2 jours (14 heures)',
     level: 'Débutant',
@@ -15,7 +16,8 @@ const trainings: Training[] = [
   {
     id: 'info-assu-002',
     title: 'Formation Informatisation Assu',
-    description: 'Guide détaillé pour appréhender l\'agilité et la communication collaborative dans le secteur de l\'assurance. Optimisez vos processus grâce aux outils numériques.',
+    description:
+      "Guide détaillé pour appréhender l'agilité et la communication collaborative dans le secteur de l'assurance. Optimisez vos processus grâce aux outils numériques.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/informatisation-assu-training-img.png',
     duration: '3 jours (21 heures)',
     level: 'Intermédiaire',
@@ -25,7 +27,8 @@ const trainings: Training[] = [
   {
     id: 'assu-analytics-003',
     title: 'Analyse de données en assurance',
-    description: 'Maîtrisez les techniques d\'analyse de données pour optimiser vos décisions commerciales et adapter vos offres d\'assurance aux besoins du marché.',
+    description:
+      "Maîtrisez les techniques d'analyse de données pour optimiser vos décisions commerciales et adapter vos offres d'assurance aux besoins du marché.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/data-analytics-training-img.png',
     duration: '4 jours (28 heures)',
     level: 'Avancé',
@@ -35,7 +38,8 @@ const trainings: Training[] = [
   {
     id: 'assu-digital-004',
     title: 'Transformation digitale en assurance',
-    description: 'Accompagnez la transformation numérique de votre entreprise d\'assurance. Stratégies, outils et méthodologies pour réussir votre transition digitale.',
+    description:
+      "Accompagnez la transformation numérique de votre entreprise d'assurance. Stratégies, outils et méthodologies pour réussir votre transition digitale.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/digital-transformation-img.png',
     duration: '3 jours (21 heures)',
     level: 'Intermédiaire',
@@ -45,7 +49,8 @@ const trainings: Training[] = [
   {
     id: 'assu-reglementation-005',
     title: 'Réglementation et conformité en assurance',
-    description: 'Restez à jour avec les dernières évolutions réglementaires du secteur de l\'assurance. Intégrez les bonnes pratiques de conformité dans vos processus.',
+    description:
+      "Restez à jour avec les dernières évolutions réglementaires du secteur de l'assurance. Intégrez les bonnes pratiques de conformité dans vos processus.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/compliance-training-img.png',
     duration: '2 jours (14 heures)',
     level: 'Expert',
@@ -55,7 +60,8 @@ const trainings: Training[] = [
   {
     id: 'assu-commercial-006',
     title: 'Techniques commerciales en assurance',
-    description: 'Développez vos compétences commerciales spécifiques au secteur de l\'assurance. Apprenez à convaincre et à fidéliser votre clientèle.',
+    description:
+      "Développez vos compétences commerciales spécifiques au secteur de l'assurance. Apprenez à convaincre et à fidéliser votre clientèle.",
     imageUrl: 'https://cheroliv.github.io/img/assu-crm/sales-techniques-img.png',
     duration: '2 jours (14 heures)',
     level: 'Intermédiaire',

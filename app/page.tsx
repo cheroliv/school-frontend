@@ -130,6 +130,4 @@ const logHomeLoaded = () => console.log("Page d'accueil chargée");
 
 //const logTrainingsDisplayed = () => { console.log(`Formations affichées`) }
 
-
-
 export default Home;
