@@ -16,9 +16,9 @@ const Home: React.FC = () => {
         <div className="flex flex-wrap justify-center">
           {trainings.map((training) => (
             <div
-              key={training.id}
-              className="w-full sm:w-[300px] m-4 border border-gray-300 rounded-md overflow-hidden transition-transform hover:scale-105"
-            >
+      key={training.id}
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 m-4 border border-gray-300 rounded-md overflow-hidden transition-transform hover:scale-105"
+    >
               <img
                 src={training.imageUrl || '/placeholder.svg'}
                 alt={`Formation ${training.title}`}
