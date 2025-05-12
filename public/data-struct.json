@@ -3,6 +3,10 @@
   "items": {
     "type": "object",
     "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the formation"
+      },
       "title": {
         "type": "string",
         "description": "The title of the formation"
@@ -11,20 +15,39 @@
         "type": "string",
         "description": "A brief description of the formation"
       },
-      "imageSrc": {
+      "imageUrl": {
         "type": "string",
         "description": "The URL of the image associated with the formation"
       },
-      "altText": {
+      "duration": {
         "type": "string",
-        "description": "The alt text for the image"
+        "description": "The duration of the formation"
+      },
+      "level": {
+        "type": "string",
+        "description": "The level of expertise required for the formation"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Keywords associated with the formation"
+      },
+      "price": {
+        "type": "number",
+        "description": "The price of the formation"
       }
     },
     "required": [
+      "id",
       "title",
       "description",
-      "imageSrc",
-      "altText"
+      "imageUrl",
+      "duration",
+      "level",
+      "tags",
+      "price"
     ]
   }
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import FormationCard from './FormationCard';
-import { Formation } from './types/formation';
+import { Formation } from '../types/Formation';
 
 interface FormationListProps {
   formations: Formation[];

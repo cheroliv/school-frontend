@@ -7,18 +7,21 @@ Le projet est une application client react, le code source est en typescript dan
 
 === Source de Données
 
-*   **Fichier :** `app/data.json`
+*   **Fichier :** ``public/data.json``
 *   **Description :** Contient la liste des formations disponibles.
-*   **Structure :** Définie dans `app/data-struct.json` (Schéma JSON). Documenter les champs et leur objectif.
+*   **Structure :** Définie dans le fichier, chaque formation contient les champs id, title, description, imageUrl, duration, level, tags, price.
+
+*   **Fichier :** ``public/data-struct.json``
+*   **Description :** Contient le schema JSON pour valider les données disponibles.
 
 === Composants
 
 *   **`app/page.tsx` :** Composant de la page principale affichant le catalogue des formations. Documenter les responsabilités du composant :
-    *   Récupération des données depuis `data.json`.
     *   Rendu de la liste des formations.
     *   Stylisation.
 *   **`app/FormationCard.tsx` :** Composant pour afficher les informations de chaque formation. Prend en entrée un objet formation.
 *   **`app/FormationList.tsx` :** Composant pour afficher une liste de composants `FormationCard`.
+*   **`app/components/MenuNavigation.tsx` :** Composant pour afficher le menu de navigation.
 *   **`app/Footer.tsx` :** Composant pour afficher le pied de page.
 *   **Autres Composants :** Identifier et documenter tous les autres composants React utilisés pour afficher les formations ou les éléments d'interface utilisateur associés. Documenter leurs props et leurs responsabilités. Si de tels composants n'existent pas, leur création sera une étape.
 
@@ -29,6 +32,13 @@ Le projet est une application client react, le code source est en typescript dan
 === Déploiement
 
 *   Décrire la stratégie de déploiement prévue (par exemple, Netlify, Vercel, hébergement statique). Le projet est configuré pour exporter un site HTML statique.
+    *   Ce projet est deployé en utilisant Netlify.
+        *   Créer un fichier `netlify.toml` à la racine du projet avec la configuration suivante:
+            [build]
+              command = "npm run build"
+              publish = "dist"
+        *   Connecter le repository github à Netlify.
+        *   Netlify va automatiquement builder et deployer le projet à chaque commit.
 
 == Technologies
 
@@ -51,17 +61,21 @@ Le projet est une application client react, le code source est en typescript dan
 
 *   **Fichier de configuration :** `next.config.js`
 *   **Output :** `'export'` - Configure Next.js pour exporter un site HTML statique.
-*   **DistDir :** `'dist'` - Spécifie che le répertoire de sortie pour le site statique exporté est `dist`.
+*   **DistDir :** `'dist'` - Spécifie che le répertoire de sortie pour le site statatique exporté est `dist`.
     *   **reactStrictMode:** `true` - Enables React strict mode for identifying potential problems in an application.
 
 == Étapes de Développement
 
 1.  **Examiner le Code Existant :** Examiner attentivement les fichiers `app/page.tsx` et `app/globals.css` existants pour comprendre l'implémentation actuelle.
 2.  **Componentization (If Necessary):** Si la logique de rendu dans `app/page.tsx` est complexe, créer des composants réutilisables (par exemple, `FormationCard`) pour afficher les formations individuelles.
-3.  **Data Fetching:** Ensure the `page.tsx` component correctly fetches and parses data from `app/data.json`. Consider using `useEffect` et `useState` hooks.
-4.  **Dynamic Rendering:** Implement the logic to dynamically render the formation catalog based on the data in `data.json`.  Mapper le tableau `data.json` à des composants React.
+3.  **Data Fetching:** S'assurer que le composant `page.tsx` récupère et analyse correctement les données depuis `app/data.json`. Consider using `useEffect` et `useState` hooks.
+4.  **Dynamic Rendering:** Implémenter la logique pour rendre dynamiquement le catalogue des formations en fonction des données dans `data.json`.  Mapper le tableau `data.json` à des composants React.
 5.  **Styling:** Apply appropriate styles to the components to create a visually appealing catalog.
 6.  **Refactor:** Refactor the code to improve the UI and code structure
+7.  **Responsiveness:** Ensure the catalog is responsive and adapts to different screen sizes.
+8.  **Deployment:** Configure the project for the chosen deployment platform (e.g., create a `netlify.toml` file for Netlify).
+9.  **Testing:** Write basic tests to ensure the catalog is rendering correctly. Consider using Playwright.
+
 
 === Tâches
 
@@ -88,12 +102,36 @@ Le projet est une application client react, le code source est en typescript dan
           * altText: string,
 *   **[Terminé] Récupération des Données :** S'assurer que le composant `page.tsx` récupère et analyse correctement les données depuis `app/data.json`.
 *   **[Terminé] Rendu Dynamique :** Implémenter la logique pour rendre dynamiquement le catalogue des formations en fonction des données dans `data.json`.  Mapper le tableau `data.json` à des composants React.
-*   **[En Cours] Styling:** Apply appropriate styles to the components to create a visually appealing catalog.
+*   **[Terminé] Styling:** Appliquer des styles appropriés aux composants pour créer un catalogue visuellement attrayant.
         * **Améliorations de style :**
             * Ajout de `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8` classes au `container` div dans `app/page.tsx` pour centrer le contenu et ajouter un espacement latéral.
             * Ajout de `shadow-md text-3xl` classes à l'élément `header` dans `app/page.tsx` pour ajouter une ombre et augmenter la taille de la police.
             * Ajout de la classe `hover:scale-105` à la div `formation-card` dans `app/FormationCard.tsx` pour ajouter un effet de survol.
-*   **[En Cours] Refactoriser l'UI :** Refactoriser le code pour améliorer la structure de l'UI.
+*   **[Terminé] Refactoriser l'UI :** Refactoriser le code pour améliorer la structure de l'UI.
         * **Actions réalisées :**
             * Le composant `Footer` a été déplacé dans un fichier séparé : `app/Footer.tsx`.
             * Le composant `FormationList` a été créé pour gérer l'affichage de la liste des formations.
+        * **Recommandations :**
+            * Vérifier que `app/page.tsx` importe bien les nouveaux composants.
+            * Supprimer l'interface `Formation` de `app/page.tsx` et utiliser l'interface de `/app/types/formation.ts`.
+*    **[Terminé] Responsiveness:** S'assurer que le catalogue est responsive et s'adapte aux différentes tailles d'écran.
+        *  **Actions réalisées :**
+            *   Ajout de classes Tailwind CSS responsives à la carte `FormationCard` pour adapter la largeur de la carte en fonction de la taille de l'écran.
+        *   **Recommandations :**
+             * Tester l'application sur différentes tailles d'écran pour s'assurer de la bonne adaptabilité.
+*   **[Terminé] Deployment:** Configurer le projet pour la plateforme de déploiement choisie (par exemple, créer un fichier `netlify.toml` file pour Netlify).
+        *   **Actions réalisées :**
+            * Création du fichier `netlify.toml`.
+*   **[Terminé] Testing:** Écrire des tests de base pour s'assurer que le catalogue s'affiche correctement. Envisager d'utiliser Playwright.
+         *   **Actions réalisées :**
+            * Création du fichier `tests/formations.spec.ts` pour tester l'affichage des titres des formations.
+*   **[Terminé] Review UI and Data:** Révision de l'UI avec un meilleur composant MenuNavigation et complétion des données.
+        *   **Actions réalisées :**
+            * Created MenuNavigation component to improve the title UX/UI.
+            * Added MenuNavigation component in `app/page.tsx`.
+            * Moved `trainings.tsx` content to `/public/data.json`
+            * Created schema `/public/data-struct.json` to validate data.
+            * Updated `app/page.tsx` to fetch training data from `/public/data.json`.
+        *   **Recommandations :**
+            * Ajouter des liens de navigation si nécessaire.
+            * Vérifier que les données s'affichent comme prévu dans l'interface utilisateur.

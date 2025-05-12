@@ -8,4 +8,9 @@ export interface Training {
   tags: string[]
   price: number
 }
-
+export interface Formation {
+  title: string;
+  description: string;
+  imageSrc: string;
+  altText: string;
+}
