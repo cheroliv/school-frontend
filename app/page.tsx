@@ -1,138 +1,59 @@
 'use client';
 
-import React from 'react';
-import trainings from './trainings';
-
-// Définition du type pour les formations
-export interface Training {
-  id: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  duration: string;
-  level: 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Expert';
-  tags: string[];
-  price: number;
-}
-
-const data: Training[] = trainings;
+import type React from 'react';
+import Core from './components/Core';
+// import trainingData from '@/data.json';
+import type { Training } from './types/training';
+import Windows from './components/Windows';
+import trains from './trainings';
 
 const Home: React.FC = () => {
-  logHomeLoaded();
-
+  console.log("Page d'accueil chargée");
+  const trainings: Training[] = trains;
   return (
-    <div
-      style={{
-        backgroundColor: '#2b2b2b',
-        color: '#c5c8c6',
-        minHeight: '100vh',
-      }}
-    >
-      <header
-        id="header"
-        style={{
-          backgroundColor: '#007bff',
-          color: 'white',
-          textAlign: 'center',
-          padding: '1em 0',
-        }}
-      >
-        <h1>Talaria - Organisme Formateur</h1>
-      </header>
-
-      <section id="catalogue" style={{ padding: '2em 0' }}>
-        <div className="container">
-          <h2 className="text-center mb-4">Catalogue des Formations</h2>
-
-          <div
-            className="formation-container"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-            }}
-          >
-            {/* Formation Assu-CRM */}
+    <Windows>
+      <Core title="Catalogue des Formations">
+        <div className="flex flex-wrap justify-center">
+          {trainings.map((training) => (
             <div
-              className="formation-card"
-              style={{
-                flexBasis: '300px',
-                margin: '1em',
-                border: '1px solid #ddd',
-                borderRadius: '5px',
-                overflow: 'hidden',
-                transition: 'transform 0.3s',
-              }}
+              key={training.id}
+              className="w-full sm:w-[300px] m-4 border border-gray-300 rounded-md overflow-hidden transition-transform hover:scale-105"
             >
               <img
-                src="https://cheroliv.github.io/img/assu-crm/Assu-CRM-training-img.png"
-                alt="Formation Assu-CRM"
-                style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+                src={training.imageUrl || '/placeholder.svg'}
+                alt={`Formation ${training.title}`}
+                className="w-full h-[200px] object-cover"
               />
-              <div className="formation-card-body" style={{ padding: '1em' }}>
-                <h3 className="card-title">Formation Assu-CRM</h3>
-                <p className="card-text">
-                  Guide détaillé pour utiliser l'outils des courtiers Assu-CRM.
-                </p>
+              <div className="p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-xl font-semibold">{training.title}</h3>
+                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">
+                    {training.level}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm">{training.description}</p>
+                <div className="mt-4 flex flex-wrap gap-1">
+                  {training.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 flex justify-between items-center">
+                  <span className="text-sm font-medium">{training.duration}</span>
+                  <span className="text-lg font-bold">{training.price} €</span>
+                </div>
               </div>
             </div>
-            {/*{logTrainingDisplayed('Formation Assu-CRM affichée')} */}
-
-            {/* Formation Informatisation Assu */}
-            <div
-              className="formation-card"
-              style={{
-                flexBasis: '300px',
-                margin: '1em',
-                border: '1px solid #ddd',
-                borderRadius: '5px',
-                overflow: 'hidden',
-                transition: 'transform 0.3s',
-              }}
-            >
-              <img
-                src="https://cheroliv.github.io/img/assu-crm/informatisation-assu-training-img.png"
-                alt="Formation Informatisation Assu"
-                style={{ width: '100%', height: '200px', objectFit: 'cover' }}
-              />
-              <div className="formation-card-body" style={{ padding: '1em' }}>
-                <h3 className="card-title">Formation Informatisation Assu</h3>
-                <p className="card-text">
-                  Guide détaillé pour appréhender l'agilité et la communication collaborative.
-                </p>
-              </div>
-            </div>
-            {/* {logTrainingDisplayed('Formation Informatisation Assu affichée')} */}
-          </div>
+          ))}
         </div>
-      </section>
-      {/* {logTrainingsDisplayed()} */}
-      <Footer />
-    </div>
+      </Core>
+    </Windows>
+
   );
 };
-
-const Footer: React.FC = () => {
-  console.log('Pied de page affiché');
-  console.log(`trainings : ${JSON.stringify(data)}`);
-
-  return (
-    <footer
-      style={{
-        backgroundColor: '#4285f4',
-        color: 'white',
-        padding: '2em 0',
-        textAlign: 'center',
-      }}
-    >
-      <p>&copy; 2024 Talaria - Organisme Formateur. Tous droits réservés.</p>
-    </footer>
-  );
-};
-const logHomeLoaded = () => console.log("Page d'accueil chargée");
-
-//const logTrainingDisplayed = (formation: string) => { console.log(formation) }
-
-//const logTrainingsDisplayed = () => { console.log(`Formations affichées`) }
 
 export default Home;
